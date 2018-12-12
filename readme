@@ -1,0 +1,29 @@
+This file contains all the java files required to run online market place Application.
+Makefile will compile all the java files and generate the class files in the same path. These files are essential to run this application.
+Policy file is required to grant the permissions for the communication between Client and Server using java RMI.
+For Admin authentication the username must be "pramod" and passowrd must be "java".
+For User authentication the username must be "geethika" and password must be "latha".
+Server Machine for my system is in-csci-rrpc01.cs.iupui.edu-10.234.136.55.
+
+Below are the steps to execute the application:
+
+1. To complie and run Registry:
+
+	a. Open a new console 
+	b. cd %Filepath%
+	c. make
+	d. set classpath = %Filepath%
+	e. For Windows: start rmiregistry 
+	   For Linux: rmiregistry
+
+2. To run Server:
+
+	a. Open in-csci-rrpc01.cs.iupui.edu - 10.234.136.55 console to run server
+	b. cd %FilePath
+	c. java -cp ".://<Path>/mysql-connector.jar" -Djava.security.policy=policy BestSaleServer
+
+3. To runClient
+	
+	a. Open more new consoles to run client
+	b. cd %FilePath%
+	c. java -cp ".://<Path>/mysql-connector.jar" -Djava.security.policy=policy BestSaleClient
